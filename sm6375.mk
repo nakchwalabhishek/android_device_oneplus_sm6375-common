@@ -419,3 +419,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oneplus/sm6375-common/sm6375-common-vendor.mk)
+
+# StatiXOS: the WiFi HAL (libwifi_hal_vendor_impl_defaults, board_wlan_device=qcwcn)
+# pulls libwifi-hal-qcom, which lives in the hardware/qcom-caf/wlan namespace.
+PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/wlan
